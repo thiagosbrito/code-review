@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { AppState } from './store/state';
 import * as fromActions from './store/actions';
 import { Observable } from 'rxjs';
+import { User } from './interfaces/user';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +14,15 @@ import { Observable } from 'rxjs';
     </div>
   `,
 })
-export class AppComponent implements OnInit {
+export class AppComponent { // Error: missing implements OnInit, OnDestroy
   user$: Observable<any>;
+  _userList: Array<User>; // Error: no need to store the data in a separate variable for this case, we can subscribe directly from the template using async pipe
 
   constructor(private store: Store<AppState>) {}
 
   ngOnInit() {
     this.user$ = this.store.select((state) => state.user); // Error: Property 'user' does not exist on type 'Object'.
+    this.user$.subscribe((users) => this._userList = users); // Error: No unsubscribe on ngOnDestroy
   }
 
   loadUser() {
