@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { AppComponent } from './app.component';
-import { userReducer } from './store/reducers';
+import { userReducer } from './store/reducers';  // this path does not exist (correct is ./store/reducer)
 import { UserEffects } from './store/effects';
 
 @NgModule({

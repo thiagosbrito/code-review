@@ -1,27 +1,48 @@
-# AppCodeReview
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+**Job Title:** Senior Front-End Developer Technical Interview Task
 
-## Development server
+**Task Description:**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+We are seeking a Senior Front-End Developer to join our team. As part of the interview process, we have prepared a technical task to assess your skills and expertise. The task involves reviewing and fixing errors in a sample Angular application. The application is designed to evaluate your knowledge in Angular, Redux state management, unit testing, and adherence to SOLID principles.
 
-## Code scaffolding
+**Task Details:**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+You will be provided with an Angular application that includes intentional errors in components, actions, reducers, effects, and unit tests. Your task is to identify and fix these errors. The application is structured as follows:
 
-## Build
+- **AppComponent:** Displays user information and includes a button to load user data. There are errors related to Redux state management and the SOLID principles.
+- **UserListComponent:** A child component that displays a list of users. There are errors related to emitting events and TypeScript type definitions.
+- **Redux Store:** Contains actions, reducers, and effects. There are errors in action types, state management, and dependency injection.
+- **Unit Tests:** There are intentional errors in unit tests for various components and services.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**Key Skills to Demonstrate:**
 
-## Running unit tests
+- Angular framework knowledge, including components, services, and template binding.
+- Experience with Redux state management and NgRx library.
+- Strong TypeScript skills, including type definitions and error handling.
+- Unit testing expertise using Jasmine and Karma.
+- Understanding and adherence to SOLID principles in software design.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Instructions:**
 
-## Running end-to-end tests
+1. Clone the provided repository.
+2. Create a branch with your the following the pattern `code-review/your-name`
+3. Identify and fix errors in the application code, including components, actions, reducers, effects, and unit tests.
+4. Ensure that the application adheres to SOLID principles.
+5. Write additional unit tests for the fixed components.
+6. Submit the fixed code along with the updated unit tests.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+**Evaluation Criteria:**
 
-## Further help
+Your task will be evaluated based on the following criteria:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Accuracy in identifying and fixing errors.
+- Adherence to best practices and coding standards.
+- Clear understanding and implementation of Angular and Redux concepts.
+- Proper application of SOLID principles.
+- Quality and completeness of unit tests.
+
+**Submission:**
+
+Please submit your fixed code and unit tests within the given time frame. Ensure that your code is well-documented, and any assumptions or design decisions are clearly stated.
+
+Best of luck with the task! We look forward to reviewing your solution.
