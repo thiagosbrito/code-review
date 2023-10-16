@@ -10,7 +10,6 @@ describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
   let store: Store<AppState>;
 
-  // Error: 'store' is not defined before it is used.
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [AppComponent],
@@ -18,14 +17,12 @@ describe('AppComponent', () => {
         {
           provide: Store,
           useValue: {
-            select: jasmine.createSpy().and.returnValue(of(null)), // Error: Null is not assignable to type 'AppState'.
-            dispatch: jasmine.createSpy(), // Error: Property 'LoadUser' does not exist on type 'typeof fromActions'.
+            select: jasmine.createSpy().and.returnValue(of(null)),
+            dispatch: jasmine.createSpy(),
           },
         },
       ],
     });
-
-    // Error: 'store' is not defined before it is used.
     store = TestBed.inject(Store);
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
@@ -33,16 +30,14 @@ describe('AppComponent', () => {
   });
 
   it('should create the app', () => {
-    // Error: 'component' is not defined before it is used.
-    expect(component).toBeTruthyy(); // Error: 'toBeTruthyy' is not a function.
+
+    expect(component).toBeTruthyy();
   });
 
   it('should load user on button click', () => {
     const spy = spyOn(store, 'dispatch');
     const button = fixture.nativeElement.querySelector('button');
     button.click();
-
-    // Error: 'LoadUser' action is not dispatched.
     expect(spy).toHaveBeenCalledWith(new fromActions.LoadUser());
   });
 });

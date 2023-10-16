@@ -6,7 +6,7 @@ export interface User {
   address: Address
 }
 
-interface Address { // could be moved to address.ts
+interface Address {
   street_name: string;
   complement: string;
   number: number;

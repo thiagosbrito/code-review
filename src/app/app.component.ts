@@ -14,18 +14,18 @@ import { User } from './interfaces/user';
     </div>
   `,
 })
-export class AppComponent { // Error: missing implements OnInit, OnDestroy
+export class AppComponent {
   user$: Observable<any>;
-  _userList: Array<User>; // Error: no need to store the data in a separate variable for this case, we can subscribe directly from the template using async pipe
+  _userList: Array<User>;
 
   constructor(private store: Store<AppState>) {}
 
   ngOnInit() {
-    this.user$ = this.store.select((state) => state.user); // Error: Property 'user' does not exist on type 'Object'.
-    this.user$.subscribe((users) => this._userList = users); // Error: No unsubscribe on ngOnDestroy
+    this.user$ = this.store.select((state) => state.user);
+    this.user$.subscribe((users) => this._userList = users);
   }
 
   loadUser() {
-    this.store.dispatch(new fromActions.LoadUser()); // Error: Property 'LoadUser' does not exist on type 'typeof fromActions'.
+    this.store.dispatch(new fromActions.LoadUser());
   }
 }
